@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📆 Calendar Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🌍 EthiocallendarConvertor <span>Ethiopian ↔ Gregorian</span></h1>
+
+      <div class="converter">
+        <div class="input-group">
+          <label for="ethDate">🟡 Ethiopian Date (MM/DD/YYYY)</label>
+          <input type="text" id="ethDate" placeholder="e.g., 07/03/1996" onkeypress="handleEnter(event, convertEthToGreg)">
+          <button onclick="convertEthToGreg()">Convert to Gregorian →</button>
+        </div>
+
+        <div class="input-group">
+          <label for="gregDate">🔵 Gregorian Date (MM/DD/YYYY)</label>
+          <input type="text" id="gregDate" placeholder="e.g., 03/06/2004" onkeypress="handleEnter(event, convertGregToEth)">
+          <button onclick="convertGregToEth()">Convert to Ethiopian →</button>
+        </div>
+
+        <div id="result"></div>
+        <button id="copyBtn" class="hidden" onclick="copyResult()">📋 Copy Result</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
